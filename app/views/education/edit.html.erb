@@ -1,7 +1,20 @@
 <h1>Editing education</h1>
 
-<%= render :partial => "form", 
-      :locals => { :f => f, :button_label => 'Update' } %>
+<% form_for(@education) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :quotation %><br />
+    <%= f.text_area :quotation %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
 
 <%= link_to 'Show', @education %> |
 <%= link_to 'Back', education_index_path %>
