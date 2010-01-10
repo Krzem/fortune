@@ -1,6 +1,6 @@
 <h1>New education</h1>
 
-<% form_for(@education) do |f| %>
+<% form_for(:education, :url => education_index_path) do |f| %>
   <%= f.error_messages %>
 
   <p>
