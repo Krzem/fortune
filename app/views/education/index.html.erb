@@ -1,0 +1,22 @@
+<h1>Listing education</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Quotation</th>
+  </tr>
+
+<% @education.each do |education| %>
+  <tr>
+    <td><%=h education.author %></td>
+    <td><%=h education.quotation %></td>
+    <td><%= link_to 'Show', education %></td>
+    <td><%= link_to 'Edit', edit_education_path(education) %></td>
+    <td><%= link_to 'Destroy', education, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New education', new_education_path %>

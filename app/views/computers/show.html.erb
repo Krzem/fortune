@@ -1,0 +1,13 @@
+<p>
+  <b>Owner:</b>
+  <%=h @computer.owner %>
+</p>
+
+<p>
+  <b>Resolution:</b>
+  <%=h @computer.resolution %>
+</p>
+
+
+<%= link_to 'Edit', edit_computer_path(@computer) %> |
+<%= link_to 'Back', computers_path %>

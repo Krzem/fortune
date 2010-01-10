@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  owner: MyString
+  resolution: 1
+
+two:
+  owner: MyString
+  resolution: 1

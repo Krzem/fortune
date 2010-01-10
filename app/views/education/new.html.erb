@@ -1,0 +1,19 @@
+<h1>New education</h1>
+
+<% form_for(@education) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :quotation %><br />
+    <%= f.text_area :quotation %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', education_path %>
