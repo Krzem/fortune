@@ -1,6 +1,19 @@
 <h1>New education</h1>
 
-<%= render :partial => "form", 
-      :locals => { :f => f, :button_label => 'Create' } %>
+<% form_for(:education, :url => education_index_path) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :quotation %><br />
+    <%= f.text_area :quotation %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
 
 <%= link_to 'Back', education_index_path %>
