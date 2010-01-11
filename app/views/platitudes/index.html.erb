@@ -1,0 +1,24 @@
+<h1>Listing platitudes</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Source</th>
+    <th>Quotation</th>
+  </tr>
+
+<% @platitudes.each do |platitude| %>
+  <tr>
+    <td><%=h platitude.author %></td>
+    <td><%=h platitude.source %></td>
+    <td><%=h platitude.quotation %></td>
+    <td><%= link_to 'Show', platitude %></td>
+    <td><%= link_to 'Edit', edit_platitude_path(platitude) %></td>
+    <td><%= link_to 'Destroy', platitude, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New platitude', new_platitude_path %>

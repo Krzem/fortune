@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :platitudes
+
   map.resources :computers
 
   map.resources :education

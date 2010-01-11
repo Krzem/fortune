@@ -1,0 +1,18 @@
+<p>
+  <b>Author:</b>
+  <%=h @platitude.author %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @platitude.source %>
+</p>
+
+<p>
+  <b>Quotation:</b>
+  <%=h @platitude.quotation %>
+</p>
+
+
+<%= link_to 'Edit', edit_platitude_path(@platitude) %> |
+<%= link_to 'Back', platitudes_path %>
