@@ -85,7 +85,7 @@ class PlatitudesController < ApplicationController
 
 
   USERS = { "wbzyl" => "sekret" }
-  before_filter :authenticate   
+  before_filter :authenticate, :only => [:destroy]   
 
   def authenticate
     authenticate_or_request_with_http_digest do |username|
