@@ -1,6 +1,5 @@
 <h1>Listing education</h1>
-<%= will_paginate @education %>
-<div class="pagination">
+
 <table>
   <tr>
     <th>Author</th>
@@ -12,18 +11,21 @@
 
 <% @education.each do |education| %>
   <tr>
+    <%= will_paginate @education %> 
+    <div class="pagination">
     <td><%=h education.author %></td>
     <td><%=h education.quotation %></td>
     <td><%=h education.source %></td>
     <td><%= link_to 'Show', education %></td>
     <td><%= link_to 'Edit', edit_education_path(education) %></td>
     <td><%= link_to 'Destroy', education, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    </div>
+    <% end %>  
+</tr>
 <% end %>
 
 </table>
-</div>
-<% end %>
+
 <br />
 
 <%= link_to 'New education', new_education_path %>
