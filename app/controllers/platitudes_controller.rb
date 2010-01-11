@@ -83,7 +83,7 @@ class PlatitudesController < ApplicationController
     end
   end
 
-class PlatitudesController < ApplicationController
+
   USERS = { "wbzyl" => "sekret" }
   before_filter :authenticate   
 
