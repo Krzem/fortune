@@ -8,7 +8,8 @@
   </tr>
 
 <% @education.each do |education| %>
-  <tr>
+<%= will_paginate @education %>
+<tr>
     <td><%=h education.author %></td>
     <td><%=h education.quotation %></td>
     <td><%=h education.source %></td>
@@ -16,6 +17,7 @@
     <td><%= link_to 'Edit', edit_education_path(education) %></td>
     <td><%= link_to 'Destroy', education, :confirm => 'Are you sure?', :method => :delete %></td>
  </tr>
+<% end %>
 <% end %>
 
 </table>
