@@ -82,4 +82,15 @@ class PlatitudesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+class PlatitudesController < ApplicationController
+  USERS = { "wbzyl" => "sekret" }
+  before_filter :authenticate   
+
+  def authenticate
+    authenticate_or_request_with_http_digest do |username|
+      USERS[username]
+    end
+  end
+
 end
