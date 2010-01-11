@@ -1,4 +1,14 @@
 class EducationController < ApplicationController
+   USERNAME, PASSWORD = "wbzyl", "sekret"
+  before_filter :authenticate, :only => [:new, :edit, :destroy]
+
+private
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password| 
+      (username == USERNAME) && (password == PASSWORD)
+    end
+  end     
+
   # GET /education
   # GET /education.xml
   def index
