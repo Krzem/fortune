@@ -2,8 +2,7 @@ class EducationController < ApplicationController
   # GET /education
   # GET /education.xml
   def index
-   
-	@education = Education.all
+    @education = Education.all
 
     respond_to do |format|
       format.html # index.html.erb
