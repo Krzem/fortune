@@ -6,8 +6,7 @@
     <th>Quotation</th>
     <th>Source</th>
   </tr>
-<%= will_paginate @education %>
-<div class="pagination">
+
 
 <% @education.each do |education| %>
   <tr>
@@ -19,7 +18,7 @@
     <td><%= link_to 'Destroy', education, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
-</div>
+
 
 </table>
 
